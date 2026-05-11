@@ -194,7 +194,6 @@
     <h2>Ne ratez aucune analyse</h2>
     <p>Chaque nouvel article publié sur Prisme vous est envoyé directement. Pas de spam, pas de revente de données.</p>
     <form class="newsletter-form" id="newsletter-form" onsubmit="handleNewsletter(event)" novalidate>
-      <!-- Remplacez YOUR_FORMSPREE_ID par votre identifiant Formspree (formspree.io) -->
       <input type="email" id="nl-email" placeholder="votre@email.fr" required aria-label="Adresse e-mail" autocomplete="email">
       <button type="submit" id="nl-btn">S'abonner</button>
     </form>
@@ -285,9 +284,7 @@
       lead     : '49 % des joueur/euses sont des femmes, mais elles restent sous-représentées dans les jeux et les studios. État des lieux d\'un secteur en pleine mutation.'
     };
 
-    if (EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
-      emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-    }
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
     function handleNewsletter(e) {
       e.preventDefault();
@@ -298,16 +295,6 @@
       btn.textContent = 'Envoi…';
       btn.disabled = true;
       document.getElementById('nl-email').disabled = true;
-
-      if (FORMSPREE_ID === 'YOUR_FORMSPREE_ID') {
-        // Mode démonstration : pas encore configuré
-        setTimeout(() => {
-          btn.textContent = '✓ Inscrit !';
-          btn.style.background = '#16a34a';
-          notice.textContent = 'Inscription simulée. Configurez Formspree pour activer l\'envoi réel.';
-        }, 800);
-        return;
-      }
 
       fetch('https://formspree.io/f/' + FORMSPREE_ID, {
         method: 'POST',
@@ -326,17 +313,14 @@
         btn.style.background = '#16a34a';
         notice.textContent = 'Un email de bienvenue vous a été envoyé.';
 
-        // Email de bienvenue via EmailJS
-        if (EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
-          emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-            to_email               : email,
-            latest_article_title   : LATEST_ARTICLE.title,
-            latest_article_url     : LATEST_ARTICLE.url,
-            latest_article_image   : LATEST_ARTICLE.image,
-            latest_article_rubrique: LATEST_ARTICLE.rubrique,
-            latest_article_lead    : LATEST_ARTICLE.lead
-          });
-        }
+        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+          to_email               : email,
+          latest_article_title   : LATEST_ARTICLE.title,
+          latest_article_url     : LATEST_ARTICLE.url,
+          latest_article_image   : LATEST_ARTICLE.image,
+          latest_article_rubrique: LATEST_ARTICLE.rubrique,
+          latest_article_lead    : LATEST_ARTICLE.lead
+        });
       })
       .catch(() => {
         btn.textContent = 'Erreur — réessayez';

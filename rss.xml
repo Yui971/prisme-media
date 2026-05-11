@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  FLUX RSS PRISME
-  Remplacez USERNAME et REPO par vos valeurs GitHub avant de pousser.
-  Exemple : https://chrisnaelberdier.github.io/prisme-media
--->
+<!-- Flux RSS Prisme — https://yui971.github.io/prisme-media/ -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Prisme — Technologie &amp; Société</title>
