@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Les algorithmes de recrutement reproduisent les biais humains. Entre discrimination invisible et régulation européenne, enquête sur une IA à surveiller.">
+  <title>Algorithmes de recrutement : discriminer sans le savoir ? — Prisme</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" type="application/rss+xml" title="Prisme — Flux RSS" href="./rss.xml">
+</head>
+<body>
+
+  <div id="reading-bar"></div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-ticker">
+      <span class="ticker-label">À la une</span>
+      <span class="ticker-text">AI Act : les entreprises ont jusqu'en 2027 pour se conformer aux nouvelles règles européennes sur l'IA à haut risque</span>
+    </div>
+    <div class="nav-main">
+      <a href="index.html" style="text-decoration:none;">
+        <div class="site-logo">
+          <div class="logo-dot"></div>
+          Prisme
+        </div>
+        <span class="logo-tagline">Technologie &amp; Société</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="article-ia.html" class="active">Numérique</a></li>
+        <li><a href="article-gaming.html">Société</a></li>
+        <li><a href="index.html#newsletter">Newsletter</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-subscribe" onclick="location.href='index.html#newsletter'">S'abonner</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ARTICLE -->
+  <main class="article-page">
+    <article class="article-wrap">
+
+      <!-- Fil d'Ariane -->
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index.html">Accueil</a>
+        <span>›</span>
+        <a href="article-ia.html">Numérique</a>
+        <span>›</span>
+        <span>Algorithmes de recrutement</span>
+      </nav>
+
+      <!-- Rubrique + Tags -->
+      <div class="rubrique">Numérique</div>
+
+      <!-- H1 -->
+      <h1 class="article-h1">Algorithmes de recrutement&nbsp;: discriminer sans le savoir&nbsp;?</h1>
+
+      <!-- Chapeau -->
+      <p class="article-lead">Tri de CV, sélection de profils, entretiens vidéo&nbsp;: l'IA envahit les services RH. Mais derrière la neutralité apparente des algorithmes se cachent des biais qui reproduisent les discriminations existantes.</p>
+
+      <!-- Tags -->
+      <div class="article-tags">
+        <span class="tag">Intelligence artificielle</span>
+        <span class="tag">Recrutement</span>
+        <span class="tag">Discrimination</span>
+        <span class="tag">AI Act</span>
+        <span class="tag">Genre &amp; Tech</span>
+      </div>
+
+      <!-- Méta-ligne -->
+      <div class="article-meta">
+        <div class="meta-left">
+          <div class="meta-avatar" aria-hidden="true">CB</div>
+          <div>
+            <span class="meta-author">Chrisnaël Berdier</span>
+            <div class="meta-details">
+              <time datetime="2025-04-30">30 avril 2025</time>
+              <span class="meta-sep"></span>
+              <span>3 min de lecture</span>
+            </div>
+          </div>
+        </div>
+        <div class="meta-right">
+          <div class="meta-views" aria-label="Nombre de vues">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span id="view-count">—</span> vues
+          </div>
+          <button class="btn-save" id="btn-save" onclick="toggleSave(this)">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+            Lire plus tard
+          </button>
+        </div>
+      </div>
+
+      <!-- Image héro -->
+      <figure class="article-hero">
+        <img
+          src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&fit=crop&crop=center"
+          alt="Tableau de bord analytique affichant des graphiques et des données de recrutement sur un écran d'ordinateur"
+          width="1200" height="675" loading="eager"
+        >
+      </figure>
+      <p class="article-caption">Des outils d'analyse de candidatures de plus en plus répandus dans les ressources humaines. © Unsplash / Luke Chesser</p>
+
+      <!-- Corps -->
+      <div class="body" id="article-body">
+
+        <h2>Quand la machine apprend à discriminer</h2>
+
+        <p>En 2018, Amazon a abandonné une IA de recrutement qui pénalisait les candidatures féminines. L'algorithme, entraîné sur dix années de CV majoritairement masculins, avait appris à rétrograder toute candidature mentionnant le mot «&nbsp;femme&nbsp;». Selon Joy Buolamwini et Timnit Gebru (2018), le taux d'erreur en reconnaissance faciale varie de <strong>1&nbsp;% pour un homme blanc à 35&nbsp;% pour une femme noire</strong>.</p>
+
+        <blockquote>
+          <p>«&nbsp;L'IA va faire des recommandations qui, si l'on n'y prend pas garde, vont entériner les discriminations.&nbsp;»</p>
+          <cite>Paul Bazin <span>— directeur général adjoint de France Travail</span></cite>
+        </blockquote>
+
+        <p>Ce phénomène rappelle d'autres formes d'exclusion numérique&nbsp;: <a href="article-gaming.html">dans le gaming, les femmes restent invisibilisées à la fois comme joueuses et comme professionnelles</a>, preuve que les biais systémiques traversent l'ensemble du secteur tech.</p>
+
+        <div class="key-stat">
+          <span class="number">35&nbsp;%</span>
+          <span class="label">de taux d'erreur pour une femme noire dans les systèmes de reconnaissance faciale — contre 1&nbsp;% pour un homme blanc (Buolamwini &amp; Gebru, 2018)</span>
+        </div>
+
+        <h2>Réguler l'IA avant qu'il ne soit trop tard</h2>
+
+        <p>L'AI Act européen, entré en vigueur en août 2024, classe le recrutement par IA en catégorie <strong>«&nbsp;haut risque&nbsp;»</strong>. Les entreprises devront garantir transparence et supervision humaine d'ici fin 2027. En France, <strong>67&nbsp;% des entreprises</strong> utilisent déjà au moins un outil d'IA en 2025&nbsp;: la vigilance est urgente.</p>
+
+        <blockquote>
+          <p>«&nbsp;Un algorithme n'est jamais biaisé en soi. Il ne constitue que la formalisation d'un processus paramétré par des êtres humains.&nbsp;»</p>
+          <cite>David Bernard <span>— CEO d'AssessFirst</span></cite>
+        </blockquote>
+
+        <p>Le débat dépasse la technique. C'est aussi une question de diversité dans les équipes qui conçoivent ces outils&nbsp;: <a href="article-gaming.html">un déséquilibre que l'on retrouve dans l'industrie du jeu vidéo, où les femmes ne représentent que 20&nbsp;% des effectifs</a>, selon Marie-Lou Dulac, présidente de Women in Games France.</p>
+
+        <p>Les chiffres augmenteront-ils d'ici fin 2027, ou continueront-ils à décroître&nbsp;?</p>
+
+      </div>
+
+      <!-- Partage -->
+      <div class="article-share">
+        <span class="share-label">Partager</span>
+        <button class="share-btn" onclick="shareArticle('twitter')">𝕏 Twitter</button>
+        <button class="share-btn" onclick="shareArticle('linkedin')">in LinkedIn</button>
+        <button class="share-btn" onclick="copyLink()">🔗 Copier le lien</button>
+      </div>
+
+      <!-- Bio auteur -->
+      <div class="author-bio">
+        <div class="author-avatar-lg" aria-hidden="true">CB</div>
+        <div class="author-info">
+          <span class="author-label">Auteur</span>
+          <span class="author-name">Chrisnaël Berdier</span>
+          <p class="author-desc">Étudiant en BUT MMI à l'Université des Antilles, Pôle Guadeloupe. Passionné par les enjeux numériques, les biais algorithmiques et les questions de représentation dans les industries tech.</p>
+        </div>
+      </div>
+
+      <!-- À lire aussi -->
+      <section class="read-also" aria-label="Article associé">
+        <span class="read-also-label">À lire aussi</span>
+        <a href="article-gaming.html" class="read-also-card">
+          <img
+            src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=300&q=75&fit=crop&crop=center"
+            alt="Joueuse de jeu vidéo devant son écran"
+            width="120" height="80" loading="lazy"
+          >
+          <div>
+            <span class="read-also-rubrique">Société</span>
+            <div class="read-also-title">Les femmes et le gaming&nbsp;: invisibles ou mal représentées&nbsp;?</div>
+            <div class="read-also-excerpt">49&nbsp;% des joueur/euses sont des femmes, mais elles restent sous-représentées dans les jeux et les studios. État des lieux d'un secteur en pleine mutation.</div>
+          </div>
+        </a>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-white"><div class="logo-dot"></div> Prisme</div>
+        <p>Prisme est un média indépendant qui analyse les fractures numériques, sociales et de genre dans la société contemporaine.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="X">𝕏</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="RSS">⊕</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Rubriques</h4>
+        <ul>
+          <li><a href="article-ia.html">Numérique</a></li>
+          <li><a href="article-gaming.html">Société</a></li>
+          <li><a href="javascript:void(0)" onclick="openModal('genre-tech')">Genre &amp; Tech</a></li>
+          <li><a href="javascript:void(0)" onclick="openModal('enquetes')">Enquêtes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Le média</h4>
+        <ul>
+          <li><a href="javascript:void(0)" onclick="openModal('a-propos')">À propos</a></li>
+          <li><a href="javascript:void(0)" onclick="openModal('equipe')">Équipe</a></li>
+          <li><a href="index.html#newsletter">Newsletter</a></li>
+          <li><a href="javascript:void(0)" onclick="openModal('contact')">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Légal</h4>
+        <ul>
+          <li><a href="javascript:void(0)" onclick="openModal('mentions-legales')">Mentions légales</a></li>
+          <li><a href="javascript:void(0)" onclick="openModal('cgu')">CGU</a></li>
+          <li><a href="javascript:void(0)" onclick="openModal('confidentialite')">Confidentialité</a></li>
+          <li><a href="javascript:void(0)" onclick="openModal('cookies')">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Prisme — Chrisnaël Berdier · BUT MMI 1 · EX 20_02 – R2.07 Écriture Multimédia</span>
+      <span>Fait avec ♥ à la Guadeloupe</span>
+    </div>
+  </footer>
+
+  <script>
+    // ── Barre de lecture ────────────────────────────────
+    const bar = document.getElementById('reading-bar');
+    const body = document.getElementById('article-body');
+    window.addEventListener('scroll', () => {
+      const rect = body.getBoundingClientRect();
+      const total = body.offsetHeight;
+      const scrolled = Math.max(0, -rect.top);
+      const pct = Math.min(100, (scrolled / total) * 100);
+      bar.style.width = pct + '%';
+    });
+
+    // ── Compteur de vues (CounterAPI partagé + localStorage fallback) ──
+    (function() {
+      const LOCAL_KEY = 'prisme_views_ia';
+      const LOCAL_BASE = 2341;
+      fetch('https://api.counterapi.dev/v1/prisme-berdier-2025/article-ia/up')
+        .then(r => r.json())
+        .then(data => {
+          const n = data.count ?? data.value ?? LOCAL_BASE;
+          localStorage.setItem(LOCAL_KEY, n);
+          document.getElementById('view-count').textContent = n.toLocaleString('fr-FR');
+        })
+        .catch(() => {
+          const v = parseInt(localStorage.getItem(LOCAL_KEY) ?? LOCAL_BASE) + 1;
+          localStorage.setItem(LOCAL_KEY, v);
+          document.getElementById('view-count').textContent = v.toLocaleString('fr-FR');
+        });
+    })();
+
+    // ── Lire plus tard ──────────────────────────────────
+    const SAVE_KEY = 'prisme_saved_ia';
+    const btn = document.getElementById('btn-save');
+    if (localStorage.getItem(SAVE_KEY)) {
+      btn.classList.add('saved');
+      btn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg> Enregistré';
+    }
+    function toggleSave(el) {
+      const saved = localStorage.getItem(SAVE_KEY);
+      if (saved) {
+        localStorage.removeItem(SAVE_KEY);
+        el.classList.remove('saved');
+        el.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg> Lire plus tard';
+      } else {
+        localStorage.setItem(SAVE_KEY, '1');
+        el.classList.add('saved');
+        el.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg> Enregistré';
+      }
+    }
+
+    // ── Partage ─────────────────────────────────────────
+    function shareArticle(platform) {
+      const url = encodeURIComponent(window.location.href);
+      const title = encodeURIComponent(document.title);
+      const urls = {
+        twitter: `https://twitter.com/intent/tweet?url=${url}&text=${title}`,
+        linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${url}`
+      };
+      window.open(urls[platform], '_blank', 'width=600,height=400');
+    }
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        const btn = document.querySelector('[onclick="copyLink()"]');
+        const orig = btn.textContent;
+        btn.textContent = '✓ Copié !';
+        setTimeout(() => btn.textContent = orig, 2000);
+      });
+    }
+  </script>
+
+  <!-- Modale -->
+  <div id="modal-overlay" class="modal-overlay" onclick="if(event.target===this)closeModal()" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()" aria-label="Fermer">&times;</button>
+      <h2 id="modal-title"></h2>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+  <script src="modal.js"></script>
+
+</body>
+</html>

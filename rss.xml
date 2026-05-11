@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  FLUX RSS PRISME
+  Remplacez USERNAME et REPO par vos valeurs GitHub avant de pousser.
+  Exemple : https://chrisnaelberdier.github.io/prisme-media
+-->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Prisme — Technologie &amp; Société</title>
+    <link>https://Yui971.github.io/prisme-media</link>
+    <description>Le média qui décrypte les fractures numériques et sociales. Technologie, société, genre et algorithmes.</description>
+    <language>fr</language>
+    <copyright>© 2025 Chrisnaël Berdier</copyright>
+    <managingEditor>berdierchrisnael@gmail.com (Chrisnaël Berdier)</managingEditor>
+    <webMaster>berdierchrisnael@gmail.com (Chrisnaël Berdier)</webMaster>
+    <lastBuildDate>Wed, 30 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://Yui971.github.io/prisme-media/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>Les femmes et le gaming : invisibles ou mal représentées ?</title>
+      <link>https://Yui971.github.io/prisme-media/article-gaming.html</link>
+      <description>49 % des joueur/euses sont des femmes, mais elles restent sous-représentées dans les jeux et les studios. État des lieux d'un secteur en pleine mutation.</description>
+      <dc:creator>Chrisnaël Berdier</dc:creator>
+      <category>Société</category>
+      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://Yui971.github.io/prisme-media/article-gaming.html</guid>
+    </item>
+
+    <item>
+      <title>Algorithmes de recrutement : discriminer sans le savoir ?</title>
+      <link>https://Yui971.github.io/prisme-media/article-ia.html</link>
+      <description>Les algorithmes de recrutement reproduisent les biais humains. Entre discrimination invisible et régulation européenne, enquête sur une IA à surveiller.</description>
+      <dc:creator>Chrisnaël Berdier</dc:creator>
+      <category>Numérique</category>
+      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://Yui971.github.io/prisme-media/article-ia.html</guid>
+    </item>
+
+  </channel>
+</rss>

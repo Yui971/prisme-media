@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Prisme — Le média qui décrypte les fractures numériques et sociales. Technologie, société, genre et algorithmes.">
+  <title>Prisme — Technologie & Société</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="alternate" type="application/rss+xml" title="Prisme — Flux RSS" href="./rss.xml">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-ticker">
+      <span class="ticker-label">À la une</span>
+      <span class="ticker-text">AI Act : les entreprises ont jusqu'en 2027 pour se conformer aux nouvelles règles européennes sur l'IA à haut risque</span>
+    </div>
+    <div class="nav-main">
+      <a href="index.html" style="text-decoration:none;">
+        <div class="site-logo">
+          <div class="logo-dot"></div>
+          Prisme
+        </div>
+        <span class="logo-tagline">Technologie &amp; Société</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="article-ia.html">Numérique</a></li>
+        <li><a href="article-gaming.html">Société</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-subscribe" onclick="document.getElementById('newsletter').scrollIntoView({behavior:'smooth'})">S'abonner</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="home-hero">
+    <!-- Article principal -->
+    <div class="hero-main">
+      <a href="article-ia.html">
+        <div class="card-img">
+          <span class="badge-new">À la une</span>
+          <img
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&fit=crop&crop=center"
+            alt="Tableau de bord analytique affichant des données RH sur un écran"
+            width="900" height="506" loading="eager"
+          >
+        </div>
+        <div class="rubrique">Numérique</div>
+        <h2>Algorithmes de recrutement&nbsp;: discriminer sans le savoir&nbsp;?</h2>
+        <p class="card-lead">Tri de CV, sélection de profils, entretiens vidéo&nbsp;: l'IA envahit les services RH. Derrière la neutralité apparente des algorithmes se cachent des biais qui reproduisent — et amplifient — les discriminations existantes.</p>
+        <div class="card-meta-row">
+          <span>Chrisnaël Berdier</span>
+          <span class="dot"></span>
+          <time datetime="2025-04-30">30 avr. 2025</time>
+          <span class="dot"></span>
+          <span>3 min</span>
+          <span class="dot"></span>
+          <span class="card-views">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span id="home-views-ia">—</span>
+          </span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Colonne latérale -->
+    <aside class="hero-side">
+      <h3>À lire aussi</h3>
+
+      <a href="article-gaming.html" class="side-card" style="text-decoration:none;">
+        <img
+          src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=300&q=75&fit=crop&crop=center"
+          alt="Joueuse devant son écran"
+          width="80" height="56" loading="lazy"
+        >
+        <div class="side-card-body">
+          <div class="rubrique" style="margin-bottom:6px;">Société</div>
+          <h4>Les femmes et le gaming&nbsp;: invisibles ou mal représentées&nbsp;?</h4>
+          <div class="side-card-meta">
+            <time datetime="2025-04-30">30 avr. 2025</time>
+            <span>·</span>
+            <span class="card-views">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span id="home-views-gaming">—</span>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Cartes supplémentaires (teaser éditorial) -->
+      <div class="side-card" style="opacity:.6; pointer-events:none;">
+        <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=300&q=70&fit=crop" alt="" width="80" height="56" loading="lazy">
+        <div class="side-card-body">
+          <div class="rubrique" style="margin-bottom:6px;">Numérique</div>
+          <h4>ChatGPT en entreprise&nbsp;: entre promesses et angle mort</h4>
+          <div class="side-card-meta"><span>Prochainement</span></div>
+        </div>
+      </div>
+
+      <div class="side-card" style="opacity:.6; pointer-events:none;">
+        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=300&q=70&fit=crop" alt="" width="80" height="56" loading="lazy">
+        <div class="side-card-body">
+          <div class="rubrique" style="margin-bottom:6px;">Société</div>
+          <h4>Métavers et genre&nbsp;: les mêmes inégalités dans un monde virtuel</h4>
+          <div class="side-card-meta"><span>Prochainement</span></div>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- SECTION : Les deux articles en grille -->
+  <div class="section-header">
+    <h2>Nos dossiers</h2>
+  </div>
+
+  <div class="articles-grid">
+    <a href="article-ia.html" class="article-card">
+      <div class="card-img">
+        <img
+          src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=800&q=75&fit=crop&crop=center"
+          alt="Bras robotique symbolisant l'IA dans les processus de sélection"
+          width="800" height="533" loading="lazy"
+        >
+      </div>
+      <div class="rubrique">Numérique</div>
+      <h3>Algorithmes de recrutement&nbsp;: discriminer sans le savoir&nbsp;?</h3>
+      <p class="card-lead">En 2018, Amazon abandonnait une IA qui pénalisait les candidatures féminines. Cinq ans plus tard, l'AI Act européen tente d'encadrer ces outils qui envahissent les RH.</p>
+      <div class="card-meta-row">
+        <span>Chrisnaël Berdier</span>
+        <span class="dot"></span>
+        <time datetime="2025-04-30">30 avr. 2025</time>
+        <span class="dot"></span>
+        <span class="card-views">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span class="views-ia-all">—</span>
+        </span>
+      </div>
+    </a>
+
+    <a href="article-gaming.html" class="article-card">
+      <div class="card-img">
+        <img
+          src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=800&q=75&fit=crop&crop=center"
+          alt="Contrôleurs de jeux vidéo colorés représentant l'univers du gaming"
+          width="800" height="533" loading="lazy"
+        >
+      </div>
+      <div class="rubrique">Société</div>
+      <h3>Les femmes et le gaming&nbsp;: invisibles ou mal représentées&nbsp;?</h3>
+      <p class="card-lead">49&nbsp;% des joueur/euses occasionnel/les sont des femmes, mais 66,5&nbsp;% des personnages des 100 jeux les plus vendus sont masculins. Enquête sur une industrie face à ses contradictions.</p>
+      <div class="card-meta-row">
+        <span>Chrisnaël Berdier</span>
+        <span class="dot"></span>
+        <time datetime="2025-04-30">30 avr. 2025</time>
+        <span class="dot"></span>
+        <span class="card-views">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span class="views-gaming-all">—</span>
+        </span>
+      </div>
+    </a>
+  </div>
+
+  <!-- STAT BAND -->
+  <div class="stat-band">
+    <div class="stat-band-inner">
+      <div class="stat-item">
+        <span class="stat-number">67&nbsp;%</span>
+        <div class="stat-label">des entreprises françaises utilisent l'IA en 2025</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">49&nbsp;%</span>
+        <div class="stat-label">des joueur/euses occasionnel/les sont des femmes</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">35&nbsp;%</span>
+        <div class="stat-label">de taux d'erreur IA pour une femme noire (vs 1 % pour un homme blanc)</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">2027</span>
+        <div class="stat-label">date limite pour la conformité IA à haut risque (AI Act)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter-section" id="newsletter">
+    <div class="rubrique" style="margin: 0 auto 16px;">Newsletter</div>
+    <h2>Ne ratez aucune analyse</h2>
+    <p>Chaque nouvel article publié sur Prisme vous est envoyé directement. Pas de spam, pas de revente de données.</p>
+    <form class="newsletter-form" id="newsletter-form" onsubmit="handleNewsletter(event)" novalidate>
+      <!-- Remplacez YOUR_FORMSPREE_ID par votre identifiant Formspree (formspree.io) -->
+      <input type="email" id="nl-email" placeholder="votre@email.fr" required aria-label="Adresse e-mail" autocomplete="email">
+      <button type="submit" id="nl-btn">S'abonner</button>
+    </form>
+    <p class="newsletter-notice" id="nl-notice">Pas de spam. Désabonnement sur simple demande. Données gérées via Formspree (RGPD).</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-white">
+          <div class="logo-dot"></div>
+          Prisme
+        </div>
+        <p>Prisme est un média indépendant qui analyse les fractures numériques, sociales et de genre dans la société contemporaine. Fondé en 2025.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="X / Twitter">𝕏</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="RSS">⊕</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Rubriques</h4>
+        <ul>
+          <li><a href="article-ia.html">Numérique</a></li>
+          <li><a href="article-gaming.html">Société</a></li>
+          <li><a href="javascript:void(0)" onclick="openModal('genre-tech')">Genre &amp; Tech</a></li>
+          <li><a href="javascript:void(0)" onclick="openModal('enquetes')">Enquêtes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Le média</h4>
+        <ul>
+          <li><a href="javascript:void(0)" onclick="openModal('a-propos')">À propos</a></li>
+          <li><a href="javascript:void(0)" onclick="openModal('equipe')">Équipe</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
+          <li><a href="javascript:void(0)" onclick="openModal('contact')">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Légal</h4>
+        <ul>
+          <li><a href="javascript:void(0)" onclick="openModal('mentions-legales')">Mentions légales</a></li>
+          <li><a href="javascript:void(0)" onclick="openModal('cgu')">CGU</a></li>
+          <li><a href="javascript:void(0)" onclick="openModal('confidentialite')">Politique de confidentialité</a></li>
+          <li><a href="javascript:void(0)" onclick="openModal('cookies')">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Prisme — Chrisnaël Berdier · BUT MMI 1 · EX 20_02 – R2.07 Écriture Multimédia</span>
+      <span>Fait avec ♥ à la Guadeloupe</span>
+    </div>
+  </footer>
+
+  <script>
+    // ── Compteur de vues (CounterAPI partagé + localStorage fallback) ──
+    function fmt(n) { return n.toLocaleString('fr-FR'); }
+    function setViews(sel, n) {
+      document.querySelectorAll(sel).forEach(el => el.textContent = fmt(n));
+    }
+    function loadCount(apiKey, localKey, localBase, sel) {
+      fetch('https://api.counterapi.dev/v1/prisme-berdier-2025/' + apiKey)
+        .then(r => r.json())
+        .then(d => setViews(sel, d.count ?? d.value ?? localBase))
+        .catch(() => setViews(sel, parseInt(localStorage.getItem(localKey) ?? localBase)));
+    }
+    loadCount('article-ia',     'prisme_views_ia',     2341, '#home-views-ia, .views-ia-all');
+    loadCount('article-gaming', 'prisme_views_gaming', 3789, '#home-views-gaming, .views-gaming-all');
+
+    // ── Newsletter ──────────────────────────────────────
+    const FORMSPREE_ID = 'xlgzaqgd';
+
+    // EmailJS — email de bienvenue envoyé à l'abonné
+    // Étapes : emailjs.com → Email Services (connectez Gmail) → Email Templates (collez email-welcome.html)
+    // Remplacez les trois valeurs ci-dessous par vos identifiants EmailJS
+    const EMAILJS_PUBLIC_KEY  = 'LyeoSw-UHXIDn2i4R';
+    const EMAILJS_SERVICE_ID  = 'service_z9ph9nd';
+    const EMAILJS_TEMPLATE_ID = 'template_4a5xj9h';
+
+    // Mettez à jour cet objet à chaque nouvel article publié
+    const LATEST_ARTICLE = {
+      title    : 'Les femmes et le gaming : invisibles ou mal représentées ?',
+      url      : 'https://Yui971.github.io/prisme-media/article-gaming.html',
+      image    : 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&q=80&fit=crop&crop=center',
+      rubrique : 'Société',
+      lead     : '49 % des joueur/euses sont des femmes, mais elles restent sous-représentées dans les jeux et les studios. État des lieux d\'un secteur en pleine mutation.'
+    };
+
+    if (EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
+      emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+    }
+
+    function handleNewsletter(e) {
+      e.preventDefault();
+      const email = document.getElementById('nl-email').value;
+      const btn   = document.getElementById('nl-btn');
+      const notice = document.getElementById('nl-notice');
+
+      btn.textContent = 'Envoi…';
+      btn.disabled = true;
+      document.getElementById('nl-email').disabled = true;
+
+      if (FORMSPREE_ID === 'YOUR_FORMSPREE_ID') {
+        // Mode démonstration : pas encore configuré
+        setTimeout(() => {
+          btn.textContent = '✓ Inscrit !';
+          btn.style.background = '#16a34a';
+          notice.textContent = 'Inscription simulée. Configurez Formspree pour activer l\'envoi réel.';
+        }, 800);
+        return;
+      }
+
+      fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          email,
+          _subject: 'Nouvel abonné Prisme',
+          source: 'Newsletter Prisme'
+        })
+      })
+      .then(r => r.json())
+      .then(d => {
+        if (!d.ok) throw new Error();
+
+        btn.textContent = '✓ Inscrit !';
+        btn.style.background = '#16a34a';
+        notice.textContent = 'Un email de bienvenue vous a été envoyé.';
+
+        // Email de bienvenue via EmailJS
+        if (EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
+          emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+            to_email               : email,
+            latest_article_title   : LATEST_ARTICLE.title,
+            latest_article_url     : LATEST_ARTICLE.url,
+            latest_article_image   : LATEST_ARTICLE.image,
+            latest_article_rubrique: LATEST_ARTICLE.rubrique,
+            latest_article_lead    : LATEST_ARTICLE.lead
+          });
+        }
+      })
+      .catch(() => {
+        btn.textContent = 'Erreur — réessayez';
+        btn.style.background = '#dc2626';
+        btn.disabled = false;
+        document.getElementById('nl-email').disabled = false;
+        notice.textContent = "L'inscription a échoué. Vérifiez votre connexion et réessayez.";
+      });
+    }
+  </script>
+  <!-- Modale -->
+  <div id="modal-overlay" class="modal-overlay" onclick="if(event.target===this)closeModal()" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()" aria-label="Fermer">&times;</button>
+      <h2 id="modal-title"></h2>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+  <script src="modal.js"></script>
+
+</body>
+</html>

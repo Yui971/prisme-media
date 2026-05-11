@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!--
+  TEMPLATE EMAIL DE BIENVENUE — PRISME
+  Copiez le contenu de ce fichier dans EmailJS › Email Templates › Content (HTML)
+  Les variables {{...}} sont remplacées automatiquement par EmailJS.
+-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenue sur Prisme</title>
+</head>
+<body style="margin:0;padding:0;background-color:#f3f4f6;font-family:'Georgia',Georgia,serif;">
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f3f4f6;padding:40px 16px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 4px 32px rgba(0,0,0,.10);">
+
+          <!-- ── HEADER ── -->
+          <tr>
+            <td style="background-color:#0d1117;padding:28px 40px;text-align:center;">
+              <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+                <tr>
+                  <td style="vertical-align:middle;padding-right:8px;">
+                    <div style="width:10px;height:10px;border-radius:50%;background-color:#c2185b;display:inline-block;"></div>
+                  </td>
+                  <td style="vertical-align:middle;">
+                    <span style="font-family:Arial,Helvetica,sans-serif;font-size:20px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#ffffff;">PRISME</span>
+                  </td>
+                </tr>
+              </table>
+              <p style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#6b7280;margin:8px 0 0;letter-spacing:.08em;text-transform:uppercase;">Technologie &amp; Société</p>
+            </td>
+          </tr>
+
+          <!-- ── HERO ── -->
+          <tr>
+            <td style="padding:36px 40px 28px;border-bottom:1px solid #e5e7eb;">
+              <p style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:#c2185b;margin:0 0 14px;">Bienvenue</p>
+              <h1 style="font-family:Georgia,serif;font-size:26px;font-weight:700;color:#0d1117;line-height:1.3;margin:0 0 16px;">Vous faites maintenant partie de Prisme.</h1>
+              <p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#3d4451;line-height:1.75;margin:0;">Chaque nouvelle publication vous sera envoyée directement. En attendant, voici notre dernier article.</p>
+            </td>
+          </tr>
+
+          <!-- ── ARTICLE ── -->
+          <tr>
+            <td style="padding:32px 40px 36px;">
+              <p style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#9ca3af;margin:0 0 20px;">Dernière publication</p>
+
+              <!-- Image -->
+              <img src="{{latest_article_image}}"
+                   alt="{{latest_article_title}}"
+                   width="520"
+                   style="width:100%;max-width:520px;height:auto;border-radius:8px;display:block;margin-bottom:20px;object-fit:cover;">
+
+              <!-- Rubrique -->
+              <p style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#c2185b;margin:0 0 10px;">{{latest_article_rubrique}}</p>
+
+              <!-- Titre -->
+              <h2 style="font-family:Georgia,serif;font-size:22px;font-weight:700;color:#0d1117;line-height:1.3;margin:0 0 14px;">{{latest_article_title}}</h2>
+
+              <!-- Chapeau -->
+              <p style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#3d4451;line-height:1.75;margin:0 0 28px;">{{latest_article_lead}}</p>
+
+              <!-- CTA -->
+              <table role="presentation" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="border-radius:999px;background-color:#c2185b;">
+                    <a href="{{latest_article_url}}"
+                       style="display:inline-block;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;color:#ffffff;text-decoration:none;padding:13px 30px;border-radius:999px;letter-spacing:.04em;">
+                      Lire l'article &rarr;
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ── SÉPARATEUR ── -->
+          <tr>
+            <td style="padding:0 40px;"><div style="border-top:1px solid #e5e7eb;"></div></td>
+          </tr>
+
+          <!-- ── FOOTER ── -->
+          <tr>
+            <td style="padding:24px 40px 28px;background-color:#f9fafb;">
+              <p style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#9ca3af;line-height:1.7;margin:0 0 10px;">
+                Vous recevez cet email car vous vous êtes abonné·e à la newsletter Prisme.<br>
+                Pour vous désinscrire, répondez à cet email en écrivant <strong>Désinscription</strong>.
+              </p>
+              <p style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#d1d5db;margin:0;">
+                © 2025 Prisme — Chrisnaël Berdier · Université des Antilles, Pôle Guadeloupe
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
