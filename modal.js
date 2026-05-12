@@ -1,4 +1,4 @@
-const MODALS = {
+﻿const MODALS = {
   'a-propos': {
     title: 'À propos de Prisme',
     content: `
@@ -144,4 +144,36 @@ function closeModal() {
 
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeModal();
+});
+
+
+/* ── Burger menu mobile ────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', function () {
+  const burger = document.getElementById('nav-burger');
+  const mobileNav = document.getElementById('nav-mobile');
+  if (!burger || !mobileNav) return;
+
+  burger.addEventListener('click', function () {
+    const isOpen = mobileNav.classList.toggle('is-open');
+    burger.classList.toggle('is-open', isOpen);
+    burger.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Fermer au clic sur un lien
+  mobileNav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      mobileNav.classList.remove('is-open');
+      burger.classList.remove('is-open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Fermer au clic en dehors
+  document.addEventListener('click', function (e) {
+    if (!burger.contains(e.target) && !mobileNav.contains(e.target)) {
+      mobileNav.classList.remove('is-open');
+      burger.classList.remove('is-open');
+      burger.setAttribute('aria-expanded', 'false');
+    }
+  });
 });

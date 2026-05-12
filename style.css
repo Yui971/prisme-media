@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap');
 
 /* ═══════════════════════════════════════════
    VARIABLES — Identité Prisme
@@ -1118,4 +1118,124 @@ button { cursor: pointer; font-family: var(--sans); border: none; background: no
 @media (max-width: 640px) {
   .modal-box { padding: 28px 20px 24px; }
   .modal-box > h2 { font-size: 1.2rem; }
+}
+
+
+/* ═══════════════════════════════════════════
+   NAV MOBILE — Hamburger
+═══════════════════════════════════════════ */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px;
+  border-radius: var(--r);
+  background: none;
+  border: 1px solid var(--border-2);
+  cursor: pointer;
+  transition: background .15s;
+  flex-shrink: 0;
+}
+.nav-burger:hover { background: var(--bg-alt); }
+.nav-burger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform .25s ease, opacity .2s ease;
+  pointer-events: none;
+}
+.nav-burger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-burger.is-open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-burger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.nav-mobile {
+  display: none;
+  overflow: hidden;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  max-height: 0;
+  transition: max-height .3s ease, padding .3s ease;
+}
+.nav-mobile.is-open {
+  max-height: 400px;
+  padding: 16px 20px 20px;
+}
+.nav-mobile ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 16px;
+}
+.nav-mobile ul a {
+  display: block;
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-2);
+  padding: 10px 14px;
+  border-radius: var(--r);
+  transition: background .15s, color .15s;
+}
+.nav-mobile ul a:hover,
+.nav-mobile ul a.active { background: var(--bg-alt); color: var(--brand); }
+.btn-subscribe-full {
+  width: 100%;
+  text-align: center;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--brand);
+  padding: 12px 20px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: background .2s;
+}
+.btn-subscribe-full:hover { background: var(--brand-dark); }
+
+/* ═══════════════════════════════════════════
+   BREAKPOINT 768px — burger actif
+═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-actions { display: none; }
+  .nav-burger { display: flex; }
+  .nav-mobile { display: block; }
+  .home-hero { padding: 20px 16px 0; gap: 16px; }
+  .articles-grid { padding: 0 16px; gap: 24px; margin-top: 16px; }
+  .section-header { padding: 0 16px; margin-top: 32px; }
+  .newsletter-section { margin: 40px auto; padding: 0 16px; }
+  .footer-top { padding: 40px 16px 28px; }
+  .footer-bottom { padding: 16px; }
+  .stat-band { padding: 32px 16px; }
+  .article-page { padding: 0 16px; }
+}
+
+/* ═══════════════════════════════════════════
+   BREAKPOINT 480px — très petit écran
+═══════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .nav-main { padding: 0 14px; height: 54px; }
+  .site-logo { font-size: 18px; }
+  .logo-tagline { display: none; }
+  .stat-band-inner { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .stat-number { font-size: 30px; }
+  .stat-label { font-size: 11px; }
+  .newsletter-section h2 { font-size: 22px; }
+  .newsletter-section p { font-size: 14px; }
+  .read-also-card { flex-direction: column; }
+  .read-also-card img { width: 100%; height: 160px; border-radius: var(--r); }
+  .article-h1 { font-size: 22px; }
+  .article-lead { font-size: 15px; }
+  .body p { font-size: 15px; }
+  .body h2 { font-size: 20px; }
+  .article-share { flex-wrap: wrap; gap: 8px; }
+  .share-btn { font-size: 11px; padding: 6px 10px; }
+  .key-stat .number { font-size: 38px; }
+  .modal-box { padding: 24px 16px 20px; }
 }
