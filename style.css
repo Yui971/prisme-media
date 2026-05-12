@@ -1203,7 +1203,7 @@ button { cursor: pointer; font-family: var(--sans); border: none; background: no
 ═══════════════════════════════════════════ */
 @media (max-width: 768px) {
   .nav-links { display: none; }
-  .nav-actions { display: none; }
+  .btn-subscribe { display: none; }
   .nav-burger { display: flex; }
   .nav-mobile { display: block; }
   .home-hero { padding: 20px 16px 0; gap: 16px; }

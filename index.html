@@ -301,6 +301,16 @@
       const btn   = document.getElementById('nl-btn');
       const notice = document.getElementById('nl-notice');
 
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email.trim())) {
+        notice.textContent = 'Veuillez renseigner une adresse e-mail valide.';
+        notice.style.color = '#dc2626';
+        notice.style.fontWeight = '600';
+        return;
+      }
+      notice.style.color = '';
+      notice.style.fontWeight = '';
+
       btn.textContent = 'Envoi…';
       btn.disabled = true;
       document.getElementById('nl-email').disabled = true;
